@@ -36,7 +36,7 @@ const categoryStore = create(
       set({ listLoading: true });
       try {
         const { data } = await requests.fetchOperator();
-        set({ list: data });
+        set({ list: data.data });
         return data;
       } catch (err) {
         return err;
